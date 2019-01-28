@@ -20,9 +20,23 @@ namespace Example3
   /// </summary>
   public partial class MainWindow : Window
   {
+    int counter = 0;
     public MainWindow()
     {
       InitializeComponent();
+
+      // В конструкторе свяжите событие «Вход мыши» (MouseEnter) с обработчиком, передаваемым при помощи лямбда-выражения. 
+      // В лямбда-выражении содержится код, изменяющий заголовок формы на информацию о количестве «входов» мыши на форму.
+
+
+      // Обработчик описать при помощи лямбда-выражения, при нажатии кнопки мыши фон формы изменять на красный.
+      // В обработчик события MouseEnter добавить код, возвращающий фону формы значение White
+
+
+      MainButton.MouseEnter += (object sender, MouseEventArgs e) => { //Title = counter++.ToString(); Background = Brushes.White; };
+
+      //MainButton.Click += (object sender, RoutedEventArgs e) => { Background = Brushes.Red; };
+
     }
   }
 }
