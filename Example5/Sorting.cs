@@ -30,8 +30,7 @@ namespace Example5
             ar[j] = temp;
             count++;
           }
-        if (onSort != null) // сортировка не завершена
-          onSort(count, ar.Length, i); // генерация события 
+        onSort?.Invoke(count, ar.Length, i); // генерация события 
       }
     }
   }
