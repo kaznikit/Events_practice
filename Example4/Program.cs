@@ -12,7 +12,7 @@ namespace Example4
         for (int j = 0; j <= arr.GetUpperBound(1); j++)
           arr[i, j] = rnd.Next(100);
       // в качестве обработчика - лямбда-выражение
-      Methods.lineComplete += () => { Console.WriteLine(); };
+      Methods.lineComplete += () => //добавить лямба выражение
       Methods.ArrayPrint(arr);
       Console.Read();
     }

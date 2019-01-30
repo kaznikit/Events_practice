@@ -45,11 +45,6 @@ namespace Example6
 
       public void Clear()
       {
-        foreach(var channel in m_channels)
-        {
-          //необходимо отписываться от событий, иначе объект не будет удален из памяти 
-          channel.StateChangedHandler -= ChannelOnStateChangedHandler;
-        }
         m_channels.Clear();
       }
 
@@ -60,7 +55,6 @@ namespace Example6
 
       public void Remove(IChannel _channel)
       {
-        _channel.StateChangedHandler -= ChannelOnStateChangedHandler;
         m_channels.Remove(_channel);
       }
     }

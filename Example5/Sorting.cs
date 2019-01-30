@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Example5
+﻿namespace Example5
 {
   // Объявление делегата-типа:
   public delegate void SortHandler(long cn, int si, int kl);
@@ -30,7 +24,7 @@ namespace Example5
             ar[j] = temp;
             count++;
           }
-        onSort?.Invoke(count, ar.Length, i); // генерация события 
+        //вызвать событие onSort!
       }
     }
   }

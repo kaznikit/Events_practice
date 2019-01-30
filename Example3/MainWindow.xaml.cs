@@ -26,11 +26,10 @@ namespace Example3
       InitializeComponent(); 
       MainButton.MouseEnter += (object sender, MouseEventArgs e) => 
       {
-        Title = counter++.ToString();
-        Background = Brushes.White;
+        //добавить действия
       };
 
-      MainButton.Click += (object sender, RoutedEventArgs e) => { Background = Brushes.Red; };          
+      MainButton.Click += (object sender, RoutedEventArgs e) => //написать лямба выражение        
     }
   }
 }

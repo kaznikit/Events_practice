@@ -15,7 +15,7 @@ namespace Example4
       {
         for (int j = 0; j <= arr.GetUpperBound(1); j++)
           Console.Write(arr[i, j] + " ");
-        lineComplete(); // событие!!
+        //вызвать событие!!
       }
     }
   }       
